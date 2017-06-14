@@ -2,7 +2,7 @@
 Study notes of the Framework
 # Struts2
 ## day01 了解struts的执行流程
-### keywords: struts.xml文件配置介绍
+### keywords: struts.xml文件配置介绍  和 在action获取表单提交数据
 1. **package name**="whatever1"
 2. 方式一  **action name**="whatever2"
    方式二  **action name**="whatever_*"   *前面的随便是什么英文字符,*是通配符 表示Action类里面的方法名称,出现在method="{1}"中1的位置
@@ -84,7 +84,8 @@ struts.xml 文件中:
 
 tips:IDEA中报错找不类先看看包的导入是否正确
 
-## day02 
-### keywords:
+## day02 在action获取表单提交数据
+### keywords: 
+
 
 ### Examples
