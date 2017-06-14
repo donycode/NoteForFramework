@@ -2,11 +2,28 @@
 Study notes of the Framework
 # Struts2
 ## day01 了解struts的执行流程
-### keywords:
+### keywords: struts.xml文件配置介绍
 1. **package name**="whatever1"
 2. 方式一  **action name**="whatever2"
    方式二  **action name**="whatever_*"   *前面的随便是什么英文字符,*是通配符 表示Action类里面的方法名称,出现在method="{1}"中1的位置
-3. **result name**="Action类中*方法的返回值"
+3. **result name**="Action类中*方法的返回值" 根据此返回值配置路径
+
+***package配置***
+1.name属性  作用:定义一个包的名称，它必须唯一。
+2.namespace属性 作用:主要是与action标签的name属性联合使用来确定一个action的访问路径
+3.extends属性 作用:指定继承自哪个包。一般值是strtus-default
+		strtus-default包是在strtus-default.xml文件中声明的。
+4.abstruct属性 它代表当前包是一个抽象的，主要是用于被继承 
+***action配置***
+1.name属性 作用:主要是与package的namespace联合使用来确定一个action的访问路径
+2.class属性  作用:用于指示当前的action类
+3.method属性  作用:用于指示当前的action类中的哪个方法执行
+***result配置***
+它主要是用于指示结果视图
+1.name属性 作用是与action类的method方法的返回值进行匹配，来确定跳转路径
+2.type属性 作用是用于指定跳转方式(默认是转发forward)
+
+
 
 ### Examples
 action类中:
